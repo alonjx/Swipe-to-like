@@ -1,0 +1,146 @@
+html, body {margin: 0; height: 100%; overflow-x: hidden}
+.App {
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #f7f7f7;
+  height: 15vmin;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: #323232;
+}
+.App-header .logo {
+    font-weight:bold;
+    display: inline-block;
+    margin-left:3vmin;
+
+}
+.App-header .left , .App-header .right{
+    height:100%;
+    display: flex;
+    align-items: center;
+}
+.App-header .btn {
+    background:#f0f0f0;
+    position: relative;
+    height:100%;
+    min-width:11vmin;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0 2vmin;
+}
+.App-header .right .btn svg {
+    padding: 2vmin;
+}
+.App-header .btn:hover {
+    color:#fdfdfd;
+}
+
+.wrapper {
+        margin-top:20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+}
+
+.no-pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.no-pic .thumbnail {
+    display: flex;
+    font-size:10vmin;
+    color:#fdfdfd;
+    margin-bottom:3vmin;
+    justify-content: center;
+    align-items: center;
+}
+.photo-display-wrapper {
+    position: relative;
+    align-items: center;
+    margin-top: 10vmin;
+}
+.photo-display {
+    outline:4px solid #f5f5f5;
+    border:4px solid #fff;
+    display: block;
+    line-height:0;
+    background:blue;
+}
+.photo-display:hover {
+    animation: image-yes-move 0.6s linear;
+    animation-fill-mode: forwards;
+
+}
+.photo-display img {
+    max-width: 80vmin;
+    max-height: 50vmin;
+    object-fit:contain;
+
+}
+
+.cover {
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    font-size:14vmin;
+    float: left;
+    z-index: 999999;
+}
+
+
+.images-view {
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    padding:1.5vmin 5vmin;
+}
+.thumbnail {
+    width:25vmin;
+    height:25vmin;
+    border: 4px solid #fff;
+    border-radius: 5vmin;
+    box-shadow: 0 0 0 3px #fcfcfc;
+    margin:1.2vmin;
+    background:#ccc;
+    overflow: hidden;
+    transition: transform 1.5s;
+}
+.thumbnail img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+}
+.thumbnail:hover {
+    transform: rotate(37deg);
+    transition: transform 1.5s;
+}
+
+
+
